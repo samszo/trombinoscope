@@ -21,10 +21,10 @@ We need three components to complete our work:<br>
 Templates are simply standard HTML documents, with special variables inserted where the RSS feed's data should appear.
 We simply insert our special variables into our template to feed data.
 here are the used variables in our project.<br> 
-1-*bold* BeginItemsRecord repeat everything between this and the end marker, for each item.<br>
-2-*bold*  EndItemsRecord: repeat everything between this and the start marker, for each item.<br>
-3-*bold*  ItemTitle: Feeds the item's title.<br>
-4- *bold* ItemEnclosureUrl: Feeds the item's enclosure URL.<br>
+1-*BeginItemsRecord* : repeat everything between this and the end marker, for each item.<br>
+2-*EndItemsRecord* : repeat everything between this and the start marker, for each item.<br>
+3-*ItemTitle* : Feeds the item's title.<br>
+4- *ItemEnclosureUrl*: Feeds the item's enclosure URL.<br>
 
 = The view =
 I have used a simple CSS for the html style.
