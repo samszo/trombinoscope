@@ -22,9 +22,9 @@ Templates are simply standard HTML documents, with special variables inserted wh
 We simply insert our special variables into our template to feed data.
 here are the used variables in our project. 
 1- ~~~BeginItemsRecord~~~ : repeat everything between this and the end marker, for each item.
-2- ~~~EndItemsRecord~~~: repeat everything between this and the start marker, for each item.
-3- ~~~ItemTitle~~~: Feeds the item's title.
-4- ~~~ItemEnclosureUrl~~~: Feeds the item's enclosure URL.
+2- EndItemsRecord: repeat everything between this and the start marker, for each item.
+3- ItemTitle: Feeds the item's title.
+4- ItemEnclosureUrl: Feeds the item's enclosure URL.
 
 ==== The view ====
 I have used a simple CSS for the html style.
