@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary How to make a dynamic trombinoscope
 
 = Introduction =
 
@@ -10,14 +10,14 @@ automatically updates its photos from a specified resource.
 I used rss2html.php which can be used to automatically display RSS feeds on websites. The good advantage of using PHP instead of a javascript is that it will be tracable by search engines.
 
 
-== How to use rss2html.php == 
+= How to use rss2html.php =
 We need three components to complete our work: 
 1- the rss2html.php script.
 2- the rss file from the desired resource in xml format.
 3- our template which is a normal html file.
 
 
-=== templates ===
+= templates =
 Templates are simply standard HTML documents, with special variables inserted where the RSS feed's data should appear.
 We simply insert our special variables into our template to feed data.
 here are the used variables in our project. 
@@ -26,5 +26,10 @@ here are the used variables in our project.
 3- ItemTitle: Feeds the item's title.
 4- ItemEnclosureUrl: Feeds the item's enclosure URL.
 
-==== The view ====
+= The view =
 I have used a simple CSS for the html style.
+
+= Testing = 
+After downloading the project, just place it in your server directory
+and go to the link:
+http://localhost/Trombinoscope/atrash/rss2html.php?XMLFILE=tro.xml&TEMPLATE=main.html
