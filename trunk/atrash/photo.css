@@ -1,0 +1,38 @@
+/* 
+    Document   : photo
+    Created on : 5 oct. 2011, 18:02:33
+    Author     : Ala
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+div.imge{
+  margin: auto;
+  border:black solid; 
+  height: auto;
+  float: left;
+  text-align: center;
+ } 
+ 
+div.des{
+text-align: center;
+font-weight: normal;
+width: auto; 
+}
+
+div.title {
+text-align: center;
+color: red;
+text-decoration: underline;
+font-size: large;
+font-family:serif;  
+} 
+
+ 
+
+
+
