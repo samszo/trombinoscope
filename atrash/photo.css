@@ -11,17 +11,21 @@
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
 div.imge{
-  margin: auto;
-  border:black solid; 
+  margin: 8px;
+  border: 4px solid #0000ff;
   height: auto;
+  width: auto;
   float: left;
   text-align: center;
  } 
  
+ 
 div.des{
-text-align: center;
-font-weight: normal;
-width: auto; 
+  text-align: center;
+  font-weight: normal;
+  font-size: smaller;
+  width: 120px;
+  margin: 2px; 
 }
 
 div.title {
