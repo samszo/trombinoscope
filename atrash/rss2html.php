@@ -488,7 +488,7 @@ if (function_exists("FeedForAll_parseExtensions") === FALSE) {
 
 @include("FeedForAll_Scripts_CachingExtension.php");
 
-@include_once("FeedForAll_XMLParser.inc.php");
+@include_once("XMLParser.php");
 
 if (function_exists("FeedForAll_rss2html_limitLength") === FALSE) {
   Function FeedForAll_rss2html_limitLength($initialValue, $limit = 0) {
