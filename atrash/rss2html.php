@@ -771,9 +771,9 @@ if (!isset($_REQUEST["buildURL"])) {
     if (($template = FeedForAll_scripts_readFile($TEMPLATEfilename, $useFopenURL)) === FALSE) {
       if (!isset($hideErrors)) {
         if ($ReadErrorString == "") {
-          echo "Unable to open template $TEMPLATEfilename, exiting\n";
+          echo "";
         } else {
-          echo "Unable to open template $TEMPLATEfilename with error <b>$ReadErrorString</b>, exiting\n";
+          echo "";
         }
       }
       return;
