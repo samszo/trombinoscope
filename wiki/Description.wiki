@@ -1,20 +1,20 @@
 #summary How to make a dynamic trombinoscope
 
-= Introduction =
+===Introduction===
 
 The main goal of this project is to make a dynamic trombinoscope that
 automatically updates its photos from a specified resource.
 
 
-= Details =
+===Details===
 I used simple_xml that helps us to easily navigate the xml files.
 you just need to load your file using :
 simple_xml_load($filename).
 Then you just navigate through the document using a loop 
 
 
-= The view =
+===The view===
 I used a simple CSS for the html style.
 
-= Testing = 
+===Testing=== 
 Just go to main.php and it will work!
