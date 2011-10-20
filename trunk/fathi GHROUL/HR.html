@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"> 
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1"> 
+<META NAME="GENERATOR" CONTENT="notepad">
+<META NAME="Author" CONTENT="Thierry Denele"> 
+<META NAME="Date" CONTENT="2006-10-24"> 
+<head> 
+<script type="text/javascript" language="JavaScript"> 
+var info = null; 
+var bBoucle = true; 
+var nim = new Number(-1);
+var nimurl= new Number(0);
+var plv = new Number(10000);
+ 
+function ow(theURL,larg,haut) 
+    { 
+larg = Math.ceil(screen.width * (larg/100)*(1024/screen.width)); 
+if(larg > screen.width) {larg = Math.ceil(larg*(95/100));} 
+haut = Math.ceil(screen.height * (haut/100)); 
+    if (info) 
+        { 
+            info.close(); 
+            info =    window.open(theURL,"info","scrollbars=yes,menubar=yes,resizable=yes,width="+ larg +"px,height="+ haut +"px,outerwidth="+ larg +"px,outerheight="+ haut +"px,top=5,left=5,screenX=5,screenY=5"); 
+            info.focus(); 
+        } 
+    else    { 
+            info =    window.open(theURL,"info","scrollbars=yes,menubar=yes,resizable=yes,width="+ larg +"px,height="+ haut +"px,outerwidth="+ larg +"px,outerheight="+ haut +"px,top=5,left=5,screenX=5,screenY=5"); 
+            info.focus(); 
+        } 
+    } 
+  
+//--- Partie Panorama d'images ----------------------------------------------- 
+var imge=new Array();
+imge[0]="photo_nebuleuseducone.jpg";
+imge[1]="photo_trapezedorion.jpg";
+imge[2]="photo_ugc10214.jpg";
+imge[3]="icomlogonew.gif";
+imge[4]="photo_papillon.jpg";
+imge[5]="photo_tournesol.jpg";
+
+var imgname=new Array(); 
+imgname[0]="http://perso.wanadoo.fr/astroweb2000/fondecran/img/"+imge[0]; 
+imgname[1]="http://perso.wanadoo.fr/astroweb2000/fondecran/img/"+imge[1];
+imgname[2]="http://perso.wanadoo.fr/astroweb2000/fondecran/img/"+imge[2];
+imgname[3]="http://picasaweb.google.com/lh/photo/4azkYh7AgGORbnQW8bb3Nw?feat=directlink"+imge[3];
+imgname[4]="http://perso.wanadoo.fr/astroweb2000/fondecran/img/"+imge[4];
+imgname[5]="http://perso.wanadoo.fr/astroweb2000/fondecran/img/"+imge[5];
+  
+var imgpreload=new Array(); 
+    for (i=0;i<=imgname.length-1;i++) 
+        { 
+            imgpreload[i]=new Image(); 
+            imgpreload[i].src=imgname[i]; 
+        } 
+  
+var imgurl=new Array(); 
+imgurl[0]="http://www.javascriptfr.com"; 
+imgurl[1]="http://www.javascript.com"; 
+imgurl[2]="http://www.allhtml.com"; 
+imgurl[3]="https://lh5.googleusercontent.com/-_ehsU8Li6rc/Tom9MZFS3zI/AAAAAAAAAGU/RDANRn3Ep-c/s512/2011-10-03%25252015.30.08.jpg"; 
+imgurl[4]="http://www.webreference.com/js"; 
+imgurl[5]="#"; 
+  
+var imgdest=new Array(); 
+imgdest[0]="popup"; 
+imgdest[1]="popup"; 
+imgdest[2]="self"; 
+imgdest[3]="popup"; 
+imgdest[4]="popup"; 
+imgdest[5]="none"; 
+  
+//------- arrêt
+function stopvaa() 
+    { 
+        bBoucle = false; 
+        nim=0
+    } 
+
+//------départ-----------
+function runvaa(nim) 
+    { 
+        bBoucle = true; 
+    } 
+  
+//------- Changement image : images[0] implique ce soit la 1ère de la page, à changer sinon-----------------
+function changeImg(nim) 
+    { 
+        nimurl=nim; 
+        document.images[0].src = imgname[nim];
+    } 
+<!---//------ Ouverture de la popup suite au click sur l'image -----------------> 
+function runurl(nim)
+	{
+        nim=nimurl; 
+// si le paramètre self a été entré dans les données imgdest -> remplacement document courant
+        if ( imgdest[nim] == "self" ) 
+            { 
+                document.location.href = imgurl[nim];
+		if (info) { info.close(); }
+            } 
+        else 
+            { 
+// si none on ne fait rien
+                if ( imgdest[nim] == "none" ) 
+                { 
+                void(0); 
+                } 
+// sinon on ouvre en 75% de large, 65% de haut
+                else
+                { 
+                ow(imgurl[nim],75,65);
+                } 
+            } 
+    } 
+// fonction plus vite - moins vite
+
+function pvite(pmv) { 
+if (pmv == 0) { plv = (plv + 2000); 
+    alert((10-plv/1000)/2);} 
+else { if (plv > 1000) 
+    {plv = (plv - 2000); pmv = 1;} 
+    else {void(0);} 
+alert((10-plv/1000)/2); 
+    } 
+} 
+
+// Initiate, en fait la fonction de rotation des images.
+
+function initiate() 
+    { 
+// incrémentation du numéro d'image
+        nim++;
+        if (nim>imgname.length-1) 
+            { 
+            nim=0;
+            } 
+        if (bBoucle) 
+            { 
+// commande de changement d'image 
+           changeImg(nim); 
+            } 
+        if (bBoucle) 
+            { 
+// relance après un certain temps
+            setTimeout("initiate()",plv); 
+            }
+// mise à jour de l'affichage du nom
+	actualise_nomimage();
+    } 
+
+function actualise_nomimage() {
+document.forms[0].elements[0].value = nim + 1;
+document.forms[0].elements[1].value=imge[nim];
+}
+</script> 
+</head> 
+<body onload="runvaa(1);initiate();">
+<div style="font-family:'Arial', sans-serif;font-size:10px;font-weight:700;text-align:center;vertical-align:middle;">
+<p><a href="#" onclick="javascript:runurl(nim);return false;">
+<!-----//------ script affichage de l'image ----------------------------->
+<script type="text/javascript" language="JavaScript"> 
+document.write("<img src='http://perso.wanadoo.fr/astroweb2000/fondecran/img/"+imgname[0]+"' style='border:0px;' alt='Cliquez ici...'></a>");
+</script>
+</p>
+<!--//-------------------- Ligne de commandes ------------------------------------------->
+<p><a href="#" onclick="stopvaa(); return false">Arrêter le panorama</a> - <a href="#" onclick="runvaa(1);initiate();return false">Reprendre</a> - <a href="javascript://" onClick="pvite(1)">Plus vite</a> - <a href="javascript://" onClick="pvite(0)">Moins vite</a> - Cliquez sur l'image !</p>
+<!----//--------------------- Formulaire pour affichage du numéro et nom de l'image ----------------------->
+<form name="noms">
+<p>image numéro : <input type="text" name="numero" style="width:10px;color:darkblue;font-weight:700;background-color:#DDEE00;margin-right:10px;">
+  Nom : <input type="text" name="nomimage" style="width:200px;color:darkblue;font-weight:700;background-color:#DDEE00;">
+</p>
+<img src="https://lh5.googleusercontent.com/-_ehsU8Li6rc/Tom9MZFS3zI/AAAAAAAAAGU/RDANRn3Ep-c/s512/2011-10-03%25252015.30.08.jpg" style="width: 511px; height: 512px;">
+</form>
+</div>
+</body> 
+</html> 
+
