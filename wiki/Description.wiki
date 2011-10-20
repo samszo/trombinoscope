@@ -14,7 +14,7 @@ Then you just navigate through the document using a loop
 
 
 = The view =
-I have used a simple CSS for the html style.
+I used a simple CSS for the html style.
 
 = Testing = 
 Just go to main.php and it will work!
