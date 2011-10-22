@@ -1,6 +1,6 @@
 <head>
  <title> TROMBINOSCOPE  THYP 2011 - 2012 </title>
- <link rel="shortcut icon" href="demos/images/favicon.ico">
+ <link rel="shortcut icon" href="Computer.ico">
  <link rel="stylesheet" href="style.css">
 </head>
 <body>
