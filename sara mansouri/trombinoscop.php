@@ -13,7 +13,7 @@ $sxml=simplexml_load_file($feedURL);
 $n=0;
  	  foreach ( $sxml->channel->item as $x ){
         $title = $x->title;
-        $summary = $x->summary;
+      
 		
 
         $gphoto = $x->children('http://schemas.google.com/photos/2007');
@@ -30,13 +30,13 @@ $n=0;
         echo"<div id='slideshow'>";
 		
 		
-		echo"<td> <a title=\"".$summary."\" rel=\"lightbox[999]\" href=\"".$content->attributes()->{'url'}."\">
-           <img src=\"".$thumbnail->attributes()->{'url'}."\" border=\"2\" ";
+		echo"<td> <a rel=\"lightbox[999]\" href=\"".$content->attributes()->{'url'}."\">
+           <img src=\"".$thumbnail->attributes()->{'url'}."\"   title=\"".$title."\"   style='margin-bottom:15px;' border=\"2\" ";
         echo "  width=\"".$thumbnail->attributes()->{'width'}."\" height=\"".$thumbnail->attributes()->{'height'}."\" "; 
 		  
-       echo "  alt=\"".$summary."\"  title=\"".$summary."\" />";
+   
         echo " <td> </a>";
-		 echo "$x->title";
+	echo "<div style='width:150px;font-family:arial,sans-serif;font-size:13px;' > $title";
 		 $n++;
 		 if($n==4)
               {
