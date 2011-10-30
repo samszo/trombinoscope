@@ -29,14 +29,14 @@ $n=0;
         $tags = $media->group->keywords;
 
       ?>
-       <div id='imge'>
+       <div id='photo'>
 	   <td> <a title="<?php echo "$summary";?>" href="<? echo $content->attributes()->{'url'} ;?>"
 		  <img src="<?php echo $thumbnail->attributes()->{'url'};?>" width="150" height="150" />
 		  
-         
+         <div id='legende'>
      <?php echo $title;?>
 	 </td>
-	
+	</div>
 	</div>
 	 
 	<?php $n++;
