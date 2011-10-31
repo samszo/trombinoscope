@@ -1,0 +1,22 @@
+
+
+body {
+	background-color: black;
+}
+
+
+#titre {
+	margin-top : 50px;
+	color: #B3B3B3;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	font-size: 50px;
+}
+
+#corps {
+	margin-top : 50px;
+	color: grey;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	font-size: 50px;
+}
