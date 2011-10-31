@@ -12,8 +12,8 @@ $sxml=simplexml_load_file($feedURL);
  echo"<table border =2>";
 $n=0;
  	  foreach ( $sxml->channel->item as $x ){
-        $title = $x->title;
-      
+         $title = $x->title;
+	 
 		
 
         $gphoto = $x->children('http://schemas.google.com/photos/2007');
@@ -25,7 +25,7 @@ $n=0;
         $thumbnail = $media->group->thumbnail[1];
         $content = $media->group->content;
         $tags = $media->group->keywords;
-
+         //$var=split("[ \n]",utf8_decode($x->title));
       
         echo"<div id='slideshow'>";
 		
