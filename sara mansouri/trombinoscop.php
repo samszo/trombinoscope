@@ -12,7 +12,8 @@ $sxml=simplexml_load_file($feedURL);
  echo"<table border =2>";
 $n=0;
  	  foreach ( $sxml->channel->item as $x ){
-         $title = $x->title;
+	  
+        $title=$x->title;
 	 
 		
 
@@ -36,7 +37,7 @@ $n=0;
 		  
    
         echo " <td> </a>";
-	echo "<div style='width:150px;font-family:arial,sans-serif;font-size:13px;' > $title";
+	echo "<div style='width:150px;font-family:arial,sans-serif;font-size:13px;' >$title";
 		 $n++;
 		 if($n==4)
               {
