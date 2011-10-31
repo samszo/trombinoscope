@@ -51,7 +51,7 @@ blockquote									{ padding: 0 20px; margin-left: 20px; border-left: 20px solid
 .stripViewer .panelContainer .panel			{ float: left; height: 100%; position: relative; width: 419px; }
 .stripNavL, .stripNavR, .stripNav			{ display: none; }
 .nav-thumb 									{ border: 1px solid black; margin-right: 5px;  height: 40px; width: 60px;border-radius: 10px;background:#7C93F9;border: 1px solid #FFFFFF;}
-#movers-row									{ margin: -43px 0 0 62px; }
+#movers-row									{ margin: -43px 0 0 0px;margin-top:9px; left:32px;}
 #movers-row div								{ width: 20%; float: left; }
 #movers-row div a.cross-link 				{ float: right; }
 .photo-meta-data							{ background: url(images/transpBlack.png); padding: 10px; height: 30px; 
