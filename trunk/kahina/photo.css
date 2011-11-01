@@ -3,6 +3,11 @@ Document   : photo
    TODO customize this sample style
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
+.mails{
+      position:absolute;
+	  left:1086px;
+	  top:-9px;
+	  }
 div.imge{
   margin: 8px;
   border: 4px solid #0000ff;
