@@ -53,12 +53,6 @@
 			theInterval();
 		});
 	</script>
-
-
- 
-
-
-
 <body>
 <div class="cadre1">
 	
@@ -84,10 +78,7 @@
 				</div>
 			 <?php }?>
 			</div>
-		</div>
-		
-		
-		
+		</div>		
 		<div id="movers-row">
 		<?php
 			$i = 1;
@@ -97,12 +88,9 @@
 		?>
 			<div><a href="<?php   echo $adr . $i; $i = $i +1; ?>" class="cross-link"><img src="<?php echo $x->enclosure['url'];?>" class="nav-thumb" alt="temp-thumb" /></a></div>
 		 <?php }?>
-		</div>
-		
-	</div>
-	
+		</div>		
+	</div>	
 	</div>
 </div>
 </body>
-
 </html>
