@@ -19,7 +19,7 @@ Tromboniscope <sub>thyp1112</sub> </font></td>
 $feedURL= "http://picasaweb.google.com/data/feed/base/user/107353736179759429408/albumid/5659262403796066625?alt=rss&kind=photo&hl=fr";
 $sxml=simplexml_load_file($feedURL);
 
-     echo"<table border =2 align='center'>";
+     echo"<table border =5 align='center'>";
        $n=0;
  	  foreach ( $sxml->channel->item as $x )
 	  {
