@@ -24,7 +24,7 @@ $sxml=simplexml_load_file($feedURL);
  	  foreach ( $sxml->channel->item as $x )
 	  {
         $title = $x->title;
-	    $var = preg_split('/,/', $title, -1 , PREG_SPLIT_NO_EMPTY);
+	    $var = preg_split('/,/', $title);
  
         $gphoto = $x->children('http://schemas.google.com/photos/2007');
         $media = $x->children('http://search.yahoo.com/mrss/');
@@ -33,8 +33,8 @@ $sxml=simplexml_load_file($feedURL);
         
         
      
-		echo"<div> <td> <a  rel=\"lightbox[999]\" href=\"".$content->attributes()->{'url'}."\">
-                <img src=\"".$thumbnail->attributes()->{'url'}."\"  title=\"".$title."\"  text-align='center'; hspace='17'; style='margin-bottom:5px;' border=\"2\""  ;
+		echo"<div> <td> <a  href=\"".$content->attributes()->{'url'}."\">
+                <img src=\"".$thumbnail->attributes()->{'url'}."\"  title=\"".$title."\"  ; hspace='17'; style='margin-bottom:5px;' border=\"2\""  ;
         echo "  width=\"".$thumbnail->attributes()->{'width'}."\" height=\"".$thumbnail->attributes()->{'height'}."\" "; 
 		echo " </a>";
 		
