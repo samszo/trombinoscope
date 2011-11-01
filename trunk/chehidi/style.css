@@ -41,8 +41,8 @@ blockquote									{ padding: 0 20px; margin-left: 20px; border-left: 20px solid
     right: 150px;
     top: 63px;
     width: 255px;
-    z-index: 2147483647;}		
-.promo #span {color: #7C93F9;font-size: 16px;margin: 0;padding: 0;text-align: center;}
+    z-index: 2147483647; text-align: center;}		
+.promo #span {color: #7C93F9;font-size: 16px;margin: 0;padding: 0;text-align: center;  }
 .stripViewer								{border-radius: 10px ;}	
 .stripViewer .panelContainer 
 .panel ul									{ text-align: left; margin: 0 15px 0 30px;}
