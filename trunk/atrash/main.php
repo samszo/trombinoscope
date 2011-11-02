@@ -7,7 +7,7 @@
 </head>
 <body>
 <script type="text/javascript">
- function show_table() {
+function show_table() {
 	 document.getElementById("send").style.display="block" ;    
 	 }
  
@@ -38,24 +38,28 @@
 	</tr>
 </table>
 <?php
- $mail_list= array();
-
+// loading the RSS file using simple xml  
  $simple_xml = simplexml_load_file ( "http://picasaweb.google.com/data/feed/base/user/107353736179759429408/albumid/5659262403796066625?alt=rss&kind=photo&hl=en_US" );
+ // this loop helps to navigate through each item
  foreach ( $simple_xml->channel->item as $x ) {
  ?>
 <div class="imge"><img src="<?php echo $x->enclosure['url'];?>"
 	width="150" height="150" />
 <div class="des">
      <?php
+      // retriving the name and email
        $strings = explode(", ",$x->title);  
        echo $strings[0]." ".$strings[1]."<br/>" ; 
        echo "E-mail: ".$strings[2]."<br/>";
+       // this check bok has names stored in array to be retreived when sending the mail
        echo '<input type="checkbox" name="m[]" value="'.$strings[2].'"> send mail </input> <br/> ' ;
       
      ?>
     </div>
 </div>    
-<?php }?>
+<?php
+ } // cloing the loop
+?>
 </form>
 </body>
 </html>
