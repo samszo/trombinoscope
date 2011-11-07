@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="1000"
+   height="1000"
+   onload="Start(evt)"     
+   id="svg11341">
+  <defs
+     id="defs1343" />
+  <style
+     id="style1324"
+     type="text/css" >
+     rect:hover {fill-opacity:1.0;}
+	    circle:hover {fill-opacity:0.9;}
+  </style>
+
+  <script type="text/ecmascript"><![CDATA[     
+
+    var time = 0;
+    var delta_time = 50;
+    var max_time = 1000;
+    var dir = 1;
+
+    var the_rect;
+	
+
+    function Start(evt) {     
+
+      the_rect = evt.target.ownerDocument.getElementById("rect1353");     
+      Oscillate();
+    }
+	 function btn_ok(){
+			alert("Travail valide.");			
+	}
+	function btn_fb(){
+			var m="mon texte";
+			var confirmation=confirm("Vous voulez partager sur facebook? :");
+			if (confirmation){
+			   var h = prompt("Texte a partager ","");
+                window.open("http://www.facebook.com/","newFenetre","width=800,height=600"); 
+			}else{}
+	}
+	function btn_tweet(){
+			var m="mon texte";
+			var confirmation=confirm("Vous voulez tweeter sur twitter? :");
+			if (confirmation){
+			  var h = prompt("Precisez La TAG","");
+                window.open("http://twitter.com/","newFenetre","width=800,height=600"); 
+			}else{}
+	}
+	function btn_qsm(){
+			today = new Date(); 
+			var h = prompt("Precisez l'heure? ","");
+			var d = prompt("Precisez la date ? ","");
+			alert("LOSE :( Nous sommes le "+today);
+			
+			}
+	function btn_send_mail(){
+			
+			var c = prompt("Votre adresse ","");
+			var cc = prompt("Adresse destinataire ","");
+			var msg = prompt("Adresse destinataire ","");
+			alert("Votre message a ete bien envoye a" +cc);
+			
+			}
+	function btn_confirm(){
+			
+			var c = prompt("Entrez le numero  d'etudiant ","");			
+			alert(c + " Numero invalide");
+			
+			}
+    function Oscillate() {
+      time = time + dir * delta_time;
+      if (time >  max_time)  dir = -1;
+      if (time < -max_time)  dir =  1;
+
+      // Calculate x position
+      x_pos = (time * 600) / max_time;
+      the_rect.setAttribute("transform", "translate(" +x_pos+ ", 0.0 )");
+
+      // Repeat
+      setTimeout("Oscillate()", delta_time)
+    }
+
+    window.Oscillate = Oscillate
+  ]]></script>     
+
+  <g
+     id="layer1">
+    <a
+       
+       style="fill-opacity:0.75;background-image:url(logo.gif);"
+       id="a1445">
+     <text x="150" y="230" style="font-size:25px;">OK</text>
+	  <circle onclick="btn_ok();" cx="6.5cm" cy="2cm" r="100" style="fill:red; stroke:black; stroke-width:0.1cm ;" transform="translate(170,50)"
+         id="rect1353" />
+   </a>
+     <a
+       
+       style="fill-opacity:0.75"
+       id="a1445">
+     <text x="275" y="230" style="font-size:25px;">Je partage </text>
+	  <circle onclick="btn_fb();" cx="6.5cm" cy="2cm" r="100" style="fill:blue; stroke:black; stroke-width:2px;" transform="translate(70,150)"
+          />
+   </a>
+ 
+     <a
+       
+       style="fill-opacity:0.75"
+       id="a1445" name="fb_share" type="icon" >
+		<text x="420" y="230" style="font-size:25px;">QSM</text>
+	  <circle onclick="btn_ok();" cx="6.5cm" cy="2cm" r="100" style="fill:green; stroke:black; stroke-width:2px;" transform="translate(-70,150)"
+          />
+   </a>
+    
+     <a
+      
+       style="fill-opacity:0.75"
+       id="a1445">
+     		<text x="560" y="230" style="font-size:25px;">E-mail</text>
+	 <circle onclick="btn_qsm();" cx="6.5cm" cy="2cm" r="100" style="fill:yellow; stroke:black; stroke-width:2px;" transform="translate(210,150)"
+          />
+   </a>
+	<a
+      
+       style="fill-opacity:0.75"
+       id="a1445">
+     <text x="700" y="230" style="font-size:25px;">Confirm</text>
+	  <circle onclick="btn_send_mail();" cx="6.5cm" cy="2cm" r="100" style="fill:green; stroke:black; stroke-width:2px;" transform="translate(350,150)"
+          />
+   </a>
+   <a
+       xlink:href=""
+       style="fill-opacity:0.75"
+       id="a1445">
+     <text x="850" y="230" style="font-size:25px;">Je Tweet</text>
+	  <circle onclick="btn_confirm();" cx="6.5cm" cy="2cm" r="100" style="fill:blue; stroke:black; stroke-width:2px;" transform="translate(490,150)"
+          />
+   </a>
+   <a
+      
+       style="fill-opacity:0.75"
+       id="a1445">
+     
+	  <circle onclick="btn_tweet();" cx="6.5cm" cy="2cm" r="100" style="fill:yellow; stroke:black; stroke-width:2 px" transform="translate(640,150)"
+          />
+   </a>
+ </g>
+</svg>
