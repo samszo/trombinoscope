@@ -111,7 +111,7 @@
        
        style="fill-opacity:0.75"
        id="a1445" name="fb_share" type="icon" >
-		<text x="420" y="230" style="font-size:25px;">QSM</text>
+		<text x="420" y="230" style="font-size:25px;">#QSM</text>
 	  <circle onclick="btn_ok();" cx="6.5cm" cy="2cm" r="100" style="fill:green; stroke:black; stroke-width:2px;" transform="translate(-70,150)"
           />
    </a>
@@ -120,7 +120,7 @@
       
        style="fill-opacity:0.75"
        id="a1445">
-     		<text x="560" y="230" style="font-size:25px;">E-mail</text>
+     		<text x="560" y="230" style="font-size:25px;">#Message</text>
 	 <circle onclick="btn_qsm();" cx="6.5cm" cy="2cm" r="100" style="fill:yellow; stroke:black; stroke-width:2px;" transform="translate(210,150)"
           />
    </a>
@@ -128,7 +128,7 @@
       
        style="fill-opacity:0.75"
        id="a1445">
-     <text x="700" y="230" style="font-size:25px;">Confirm</text>
+     <text x="700" y="230" style="font-size:25px;">#Confirm</text>
 	  <circle onclick="btn_send_mail();" cx="6.5cm" cy="2cm" r="100" style="fill:green; stroke:black; stroke-width:2px;" transform="translate(350,150)"
           />
    </a>
