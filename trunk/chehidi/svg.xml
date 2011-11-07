@@ -48,6 +48,7 @@
 			var confirmation=confirm("Vous voulez tweeter sur twitter? :");
 			if (confirmation){
 			  var h = prompt("Precisez La TAG","");
+			 
                 window.open("http://twitter.com/","newFenetre","width=800,height=600"); 
 			}else{}
 	}
@@ -120,15 +121,15 @@
        style="fill-opacity:0.75"
        id="a1445">
      		<text x="560" y="230" style="font-size:25px;">#Message</text>
-	 <circle onclick="btn_qsm();" cx="6.5cm" cy="2cm" r="100" style="fill:yellow; stroke:black; stroke-width:2px;" transform="translate(210,150)"
+	 <circle onclick="btn_send_msg();" cx="6.5cm" cy="2cm" r="100" style="fill:yellow; stroke:black; stroke-width:2px;" transform="translate(210,150)"
           />
    </a>
 	<a
       
        style="fill-opacity:0.75"
        id="a1445">
-     <text x="700" y="230" style="font-size:25px;">#TAGS</text>
-	  <circle onclick="btn_send_mail();" cx="6.5cm" cy="2cm" r="100" style="fill:green; stroke:black; stroke-width:2px;" transform="translate(350,150)"
+     <text x="700" y="230" style="font-size:25px;">#Je tweet</text>
+	  <circle onclick="btn_tweet();" cx="6.5cm" cy="2cm" r="100" style="fill:green; stroke:black; stroke-width:2px;" transform="translate(350,150)"
           />
    </a>
    <a
@@ -136,7 +137,7 @@
        style="fill-opacity:0.75"
        id="a1445">
      <text x="850" y="230" style="font-size:25px;">Je Tweet</text>
-	  <circle onclick="btn_confirm();" cx="6.5cm" cy="2cm" r="100" style="fill:blue; stroke:black; stroke-width:2px;" transform="translate(490,150)"
+	  <circle onclick="btn_tweet();" cx="6.5cm" cy="2cm" r="100" style="fill:blue; stroke:black; stroke-width:2px;" transform="translate(490,150)"
           />
    </a>
    
