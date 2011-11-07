@@ -4,8 +4,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    version="1.0"
-   width="1000"
-   height="1000"
+   width="800"
+   height="600"
    onload="Start(evt)"     
    id="svg11341">
   <defs
@@ -33,7 +33,7 @@
       Oscillate();
     }
 	 function btn_ok(){
-			alert("Travail valide.");			
+			alert("Vous pouvez tweeter.");			
 	}
 	function btn_fb(){
 			var m="mon texte";
@@ -53,23 +53,22 @@
 	}
 	function btn_qsm(){
 			today = new Date(); 
-			var h = prompt("Precisez l'heure? ","");
-			var d = prompt("Precisez la date ? ","");
-			alert("LOSE :( Nous sommes le "+today);
+			var h = prompt("Posez votre question? ");
+		   alert("Question envoyee");
 			
 			}
 	function btn_send_mail(){
 			
-			var c = prompt("Votre adresse ","");
-			var cc = prompt("Adresse destinataire ","");
-			var msg = prompt("Adresse destinataire ","");
+			var c = prompt("Votre pseudo ","");
+			var cc = prompt("Pseudo destinataire ","");
+			var msg = prompt("Message ","");
 			alert("Votre message a ete bien envoye a" +cc);
 			
 			}
 	function btn_confirm(){
 			
-			var c = prompt("Entrez le numero  d'etudiant ","");			
-			alert(c + " Numero invalide");
+			var c = prompt("Entrez votre TAG ","");			
+			alert(c + " TAG invalide");
 			
 			}
     function Oscillate() {
@@ -95,8 +94,8 @@
        style="fill-opacity:0.75;background-image:url(logo.gif);"
        id="a1445">
      <text x="150" y="230" style="font-size:25px;">OK</text>
-	  <circle onclick="btn_ok();" cx="6.5cm" cy="2cm" r="100" style="fill:red; stroke:black; stroke-width:0.1cm ;" transform="translate(170,50)"
-         id="rect1353" />
+	  
+     
    </a>
      <a
        
@@ -128,7 +127,7 @@
       
        style="fill-opacity:0.75"
        id="a1445">
-     <text x="700" y="230" style="font-size:25px;">#Confirm</text>
+     <text x="700" y="230" style="font-size:25px;">#TAGS</text>
 	  <circle onclick="btn_send_mail();" cx="6.5cm" cy="2cm" r="100" style="fill:green; stroke:black; stroke-width:2px;" transform="translate(350,150)"
           />
    </a>
@@ -140,13 +139,6 @@
 	  <circle onclick="btn_confirm();" cx="6.5cm" cy="2cm" r="100" style="fill:blue; stroke:black; stroke-width:2px;" transform="translate(490,150)"
           />
    </a>
-   <a
-      
-       style="fill-opacity:0.75"
-       id="a1445">
-     
-	  <circle onclick="btn_tweet();" cx="6.5cm" cy="2cm" r="100" style="fill:yellow; stroke:black; stroke-width:2 px" transform="translate(640,150)"
-          />
-   </a>
+   
  </g>
 </svg>
